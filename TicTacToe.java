@@ -12,6 +12,7 @@ public class TicTacToe {
 		System.out.println("Welcome To Tic-Tac-Toe Game");	
 		initializeBoard();
 		input();
+		showBoard();
 	}
 	
 	static void initializeBoard() {
@@ -27,14 +28,24 @@ public class TicTacToe {
 		char input = sc.next().toUpperCase().charAt(0);
 		String compute;
 		if(input == 'X') {
-			compute="o";
+			compute="O";
 		}
 		else if(input =='O') {
-			compute="x";
+			compute="X";
 		}
 		else {
 			System.out.println("Enter correct choice");
 			input();
 		}	
 	}	
+	
+	static void showBoard() {
+		System.out.println("/-----------\\");
+		System.out.println("| " + board[1] + " | " + board[2] + " | " + board[3] + " | ");
+		System.out.println("|-----------|");
+		System.out.println("| " + board[4] + " | " + board[5] + " | " + board[6] + " | ");
+		System.out.println("|-----------|");
+		System.out.println("| " + board[7] + " | " + board[8] + " | " + board[9] + " | ");
+		System.out.println("/-----------\\");
+		}
 }
